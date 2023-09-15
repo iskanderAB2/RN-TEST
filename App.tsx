@@ -5,7 +5,7 @@ const App = () => (
   <SafeAreaView>
     <View>
           <Text className="tw-text-2xl text-black tw-bg-yellow-300">
-              Iskander 🍕🍔 
+              Iskander 🍕🍔    
         </Text>
     </View>
   </SafeAreaView>

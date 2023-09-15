@@ -41,29 +41,25 @@ const stylesConfiguration = {
   use: ['style-loader', 'css-loader', 'postcss-loader'],
 };
 
-const tsConfiguration =  {
-      test: /\.ts?$/,
-      loader: 'ts-loader',
-      options: {
-        compilerOptions: {
-          noEmit: false,
-        },
-      },
-      exclude: /node_modules/,
+const tsConfiguration = {
+  test: /\.(tsx|ts|jsx|js|mjs)$/,
+  exclude: /node_modules/,
+  loader: 'ts-loader',
 };
 
 module.exports = {
   entry: [
     // load any web API polyfills
-    path.resolve(appDirectory, 'index.web.js'),
+    path.resolve(appDirectory, 'index.web.ts'),
   ],
 
   // configures where the build ends up
   output: {
-    filename: 'bundle.web.js',
+    filename: 'app-[hash].web.js',
     path: path.resolve(appDirectory, 'dist'),
   },
 
+  devtool: 'source-map',
   // ...the rest of your config
 
   module: {
@@ -75,14 +71,19 @@ module.exports = {
   },
 
   resolve: {
-    // This will only alias the exact import "react-native"
-    alias: {
+    extensions: [
+      '.web.tsx',
+      '.web.ts',
+      '.tsx',
+      '.ts',
+      '.web.jsx',  
+      '.web.js',
+      '.jsx',
+      '.js',
+    ], // read files in fillowing order
+    alias: Object.assign({
       'react-native$': 'react-native-web',
-    },
-    // If you're working on a multi-platform React Native app, web-specific
-    // module implementations should be written in files using the extension
-    // `.web.js`.
-    extensions: [ '.tsx', '.ts','.web.js', '.js' ],
+    }),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -93,4 +94,5 @@ module.exports = {
   cache: {
     type: 'filesystem',
   },
+  mode: 'development'
 };

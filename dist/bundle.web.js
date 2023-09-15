@@ -26,7 +26,7 @@ eval("/**\n * Copyright (c) Meta Platforms, Inc. and affiliates.\n *\n * This so
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var _interopRequireDefault=__webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ \"./node_modules/@babel/runtime/helpers/interopRequireDefault.js\");var _AppRegistry=_interopRequireDefault(__webpack_require__(/*! react-native-web/dist/exports/AppRegistry */ \"./node_modules/react-native-web/dist/exports/AppRegistry/index.js\"));var _App=_interopRequireDefault(__webpack_require__(/*! ./App */ \"./App.tsx\"));__webpack_require__(/*! ./src/style.css */ \"./src/style.css\");_AppRegistry[\"default\"].registerComponent('App',function(){return _App[\"default\"];});_AppRegistry[\"default\"].runApplication('App',{rootTag:document.getElementById('root')});\n\n//# sourceURL=webpack://sso_front_end_pack/./index.web.js?");
+eval("var _interopRequireDefault=__webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ \"./node_modules/@babel/runtime/helpers/interopRequireDefault.js\");var _AppRegistry=_interopRequireDefault(__webpack_require__(/*! react-native-web/dist/exports/AppRegistry */ \"./node_modules/react-native-web/dist/exports/AppRegistry/index.js\"));var _index=_interopRequireDefault(__webpack_require__(/*! ./src/index */ \"./src/index.tsx\"));__webpack_require__(/*! ./src/style.css */ \"./src/style.css\");_AppRegistry[\"default\"].registerComponent('App',function(){return _index[\"default\"];});_AppRegistry[\"default\"].runApplication('App',{rootTag:document.getElementById('root')});\n\n//# sourceURL=webpack://sso_front_end_pack/./index.web.js?");
 
 /***/ }),
 
@@ -1235,13 +1235,13 @@ eval("/**\n * Copyright (c) Nicolas Gallagher\n *\n * This source code is licens
 
 /***/ }),
 
-/***/ "./App.tsx":
-/*!*****************!*\
-  !*** ./App.tsx ***!
-  \*****************/
+/***/ "./src/index.tsx":
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
 /***/ (() => {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (8:19)\\nFile was processed with these loaders:\\n * ./node_modules/ts-loader/index.js\\nYou may need an additional loader to handle the result of these loaders.\\n| const react_1 = __importDefault(require(\\\"react\\\"));\\n| const react_native_1 = require(\\\"react-native\\\");\\n> const App = () => (<react_native_1.SafeAreaView>\\n|     <react_native_1.View>\\n|           <react_native_1.Text className=\\\"tw-text-2xl text-black tw-bg-yellow-300\\\">\");\n\n//# sourceURL=webpack://sso_front_end_pack/./App.tsx?");
+eval("throw new Error(\"Module parse failed: Unexpected token (5:2)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| \\n| const HomeScreen = () => (\\n>   <SafeAreaView>\\n|     <View>\\n|           <Text className=\\\"tw-text-2xl text-black tw-bg-yellow-300\\\">\");\n\n//# sourceURL=webpack://sso_front_end_pack/./src/index.tsx?");
 
 /***/ }),
 
